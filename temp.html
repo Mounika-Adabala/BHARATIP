@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>
+            Temperature convertor
+        </title>
+        <style>
+            body{
+                display: flex;
+                background-image: url("D:/PDF/bgimg.jpg");
+                align-items: center;
+                justify-content: center;
+                min-height: 50vh;
+                flex-direction: column;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            h1{
+                font-size: 50px;
+                top: -50px;
+                font-family:'Courier New', Courier, monospace;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            label{
+                color: white;
+                font-size: 25px;
+            }
+            option{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .area{
+                width: 90%;
+                top:50px;
+                max-width: 420px;
+                background-color: rgb(124, 61, 143);
+                padding: 20px;
+                border-radius: 10px;
+            }
+            input {
+                flex: 1;
+                padding: 10px 20px;
+                border-radius: 10px;
+                border: 1px solid blueviolet;
+                outline:blueviolet;
+                background-color: white;
+                left: 0px;
+            }
+            #tempdif{
+                flex: 1;
+                padding: 10px 20px;
+                border-radius: 10px;
+            }
+            #tempdiff{
+                flex: 1;
+                padding: 10px 20px;
+                border-radius: 10px;
+            }
+            #add{
+                padding: 10px 20px;
+                font-size: 15px;
+                outline: none;
+                border: none;
+                border-radius: 20px;
+                background-color: plum;
+                cursor: pointer;
+                color: black;
+            }
+            .pic{
+                position: absolute;
+                left: 120px;
+                top: 420px;
+            }
+            #result{
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 25px;
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="color: white;">CHECK YOUR TEMPARETURE</h1>
+        <div class="area">
+            <center>
+                <div class="bar">
+                    <form id="calc" onsubmit="caltem(); return false">
+                    <label for="temp">Enter the value</label><br><br>
+                    <input type="number" name="temp" id="box" value="0">
+                    <br><br>
+                    <label for="tem">From: </label>
+                    <select name="tempdif" id="tempdif">
+                        <option value="sel">From</option>
+                        <option value="cels">&#176;Celsius</option>
+                        <option value="fah">&#176;Fahrenheit</option>
+                        <option value="kel">Kelvin</option>
+                    </select>
+                    <br><br>
+                    <label for="tem">To: </label>
+                    <select name="tempdif" id="tempdiff">
+                        <option value="sel">To</option>
+                        <option value="cel">&#176;Celsius</option>
+                        <option value="fa">&#176;Fahrenheit</option>
+                        <option value="ke">Kelvin</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" name="temp" id="add">
+                    <br><br><br>
+                    <span id="result"></span>
+                    </form>
+                </div>
+            </center>
+        </div>
+        <script src="tempo.js"></script>
+    </body>
+</html>
